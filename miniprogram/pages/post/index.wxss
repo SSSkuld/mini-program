@@ -15,15 +15,16 @@
   background-size: 60rpx 60rpx;
 }
 .ConcernHot{  /*关注热门按钮*/
-  padding-left: 180rpx;
-  display: flex
+  position: relative
 }
-.ConcernPostButton{  /*关注动态按钮*/  
-  font-size: 33rpx;
-  padding: 0px;
-  height:70rpx;
-  width: 100rpx;
-  display: table;
+.ConcernPostButton1{  /*关注动态按钮*/
+  position: absolute;
+  left: 250rpx;
+
+}
+.ConcernPostButton2{  /*关注动态按钮*/
+  position: absolute;
+  left:400rpx;
 }
 .WriteButtonView{  /*相机显示*/
   padding: 10rpx;
@@ -43,7 +44,7 @@
   width: 100%;
   height: 80rpx;
   position: relative;
-  background-color: azure;
+  background-color: white;
 }
 
 .UserName{  /*动态用户*/
@@ -51,13 +52,13 @@
   font-size: 30rpx;
   color: black;
   position: absolute;
-  left: 80rpx;
-  top: 25rpx;
+  left: 85rpx;
+  top: 20rpx;
 }
 .PostTime{  /*动态时间*/
   position: absolute;
   right: 10rpx;
-  bottom: 0rpx;
+  bottom: 25rpx;
   font-size: 25rpx;
   color: #CCC
 }

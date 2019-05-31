@@ -3,12 +3,13 @@
 .uparea {
   position: relative;
   width: 100%;
-  height: 350rpx;
-  background-color: rgba(211, 211, 211, 0.507);
+  height: 300rpx;
+  background-color: rgba(249, 249, 249, 1);
 }
 
 .user-avatar {
   position: absolute;
+  top: 20rpx;
   left: 20rpx;
   width: 200rpx;
   height: 200rpx;
@@ -20,51 +21,60 @@
   position: absolute;
   width: 200rpx;
   left: 20rpx;
-  top: 210rpx;
+  bottom: 30rpx;
   text-align: center;
   font-size: 30rpx;
-  color: #007aff;
+  color: black;
+  font-weight: bold;
 }
 
 .user-post {
   width: 100rpx;
   height: 100rpx;
   position: absolute;
-  top: 50rpx;
+  top: 90rpx;
   left: 250rpx;
+  text-align: center;
 }
 
 .user-followers {
-  width: 100rpx;
+  width: 130rpx;
   height: 100rpx;
   position: absolute;
-  top: 50rpx;
-  left: 350rpx;
+  top: 90rpx;
+  left: 380rpx;
+  text-align: center;
 }
 
 .user-followings {
-  width: 100rpx;
+  width: 130rpx;
   height: 100rpx;
   position: absolute;
-  top: 50rpx;
-  left: 530rpx;
+  top: 90rpx;
+  left: 560rpx;
+  text-align: center;
+
 }
 
 .post-number-text, .followers-number-text, .followings-number-text{
+  /* left: 20rpx; */
+  text-align: center;
   font-size: 34rpx;
+  color: black;
 }
 
 .post-text, .followers-text, .followings-text{
   font-size: 30rpx;
-  color: aliceblue;
+  color: rgb(152, 152, 168);
 }
 
-.follow-button{
+.profile-button{
+  top: 110px;
   position: absolute;
-  width: 80%;
+  width: 60%;
   height: 50rpx;
-  bottom: 10rpx;
-  left: 10%;
+  bottom: 100rpx;
+  left: 30%;
   font-size: 30rpx;
   text-align: center;
   line-height: 50rpx;
@@ -168,7 +178,8 @@
 .post-text{
   widows: 100%;
   padding-left: 20rpx;
-  color: black;
+  color:black;
+  margin-bottom: 20rpx;
 }
 
 .swiper{
@@ -184,4 +195,14 @@
 .swiper-pre{
   width: 100%;
   height: 750rpx;
+}
+
+.follow-button{
+  background-color: rgb(18, 150, 219);
+  color: white;
+  width: 160rpx;
+  top: 205rpx;
+  right: 50rpx;
+  position: absolute;
+  font-size: 25rpx;
 }

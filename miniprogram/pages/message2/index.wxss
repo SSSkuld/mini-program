@@ -73,6 +73,7 @@
   position: absolute;
   /* font-weight: bold; */
   left:440rpx;
+
 }
 .ButtonText{
   font-weight: bold;

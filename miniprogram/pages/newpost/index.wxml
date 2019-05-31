@@ -1,3 +1,10 @@
+<!-- share -->
+<view class='topper'>
+  <button class='share-btn' bindtap='share'>
+    Share
+  </button>
+</view>
+
 <view>
   <textarea class="input-text" auto-focus placeholder="Write a caption..." bindinput='bindinput' maxlength="140">
   </textarea>
@@ -22,7 +29,3 @@
   Tag people
 </view> -->
 
-<!-- share -->
-<button class='share-btn' bindtap='share'>
-  Share
-</button>
