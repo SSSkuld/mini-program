@@ -1,0 +1,49 @@
+<!-- 操作用户点的赞 -->
+<view hidden='{{hidden_like}}' class='container'>
+  <block wx:for='{{user_like}}' wx:key='{{_id}}'>
+    <navigator url='../post/index?_postid={{item.post_id}}'>
+      <view class='user-like-view'>
+        <image class='user-like-avatar' src='{{userAvatar}}'>
+        </image>
+        <view class='like-text'>
+          You just liked this post.
+        </view>
+        <view class='like-time'>
+          {{item.postTime}}
+        </view>
+        <image class='post-image-preview' src='{{item.image}}'>
+        </image>
+      </view>
+    </navigator>
+  </block>
+</view>
+
+<!-- 操作用户对他人点赞 -->
+<view hidden='{{hidden_belike}}' class='container'>
+  <block wx:for='{{user_belike}}' wx:key='{{_id}}'>
+    <navigator url='../post/index?_postid={{item.post_id}}'>
+      <view class='user-like-view'>
+        <image class='user-like-avatar' src='{{item.userAvatar}}'>
+        </image>
+        <view class='like-text'>
+          {{item.userNickname}} just liked this post.
+        </view>
+        <view class='like-time'>
+          {{item.postTime}}
+        </view>
+        <image class='post-image-preview' src='{{item.image}}'>
+        </image>
+      </view>
+    </navigator>
+  </block>
+</view>
+
+<!-- 顶部导航栏 -->
+<view class='nav-top'>
+  <view bindtap='changeLike'>
+    following
+  </view>
+  <view bindtap='changeBelike'>
+    you
+  </view>
+</view>
