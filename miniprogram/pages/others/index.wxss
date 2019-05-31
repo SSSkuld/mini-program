@@ -205,4 +205,5 @@
   right: 50rpx;
   position: absolute;
   font-size: 25rpx;
+  
 }
