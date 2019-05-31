@@ -39,11 +39,23 @@
 </view>
 
 <!-- 顶部导航栏 -->
-<view class='nav-top'>
-  <view bindtap='changeLike'>
-    following
-  </view>
-  <view bindtap='changeBelike'>
-    you
+
+<view class='Navigator' style='position:fixed;top:0;'>
+  <view class="ConcernHot">
+    <button class="ConcernPostButton1" bindtap="changeLike">
+      <text class="ButtonText">Following</text>
+    </button>
+    <button class="ConcernPostButton2" bindtap="changeBelike">
+      <text class="ButtonText">You</text>
+    </button>
   </view>
 </view>
+
+<!-- <view class='nav-top'>
+  <button bindtap='changeLike'>
+    following
+  </button>
+  <button bindtap='changeBelike'>
+    you
+  </button>
+</view> -->

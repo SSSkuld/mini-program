@@ -5,9 +5,9 @@
 .user-like-view{
   width: 750rpx;
   height: 150rpx;
-  background-color: azure;
+  background-color: white;
   position:  relative;
-  
+  border-bottom: 1px solid #ccc;
 }
 .user-like-avatar{
   width: 80rpx;
@@ -15,7 +15,7 @@
   border-radius: 50%;
   position: absolute;
   left: 20rpx;
-  top: 20rpx;
+  top: 30rpx;
 }
 
 .post-image-preview{
@@ -36,10 +36,44 @@
 
 /* 文本 */
 .like-text{
+  top: 30rpx;
+  left: 130rpx;
+  width: 700rpx;
   font-size: 30rpx;
+  position: absolute;
 }
 
 .like-time{
   font-size: 25rpx;
-  color: lightgrey
+  top: 80rpx;
+  left: 130rpx;
+  width: 700rpx;
+  color: rgb(90, 90, 90);
+  position: absolute;
+}
+
+.Navigator{  /*导航栏*/
+  height: 80rpx;
+  width: 100%;
+  background-color: rgb(240, 240, 240);
+  border-bottom: 1px solid #ccc;
+  display: flex
+}
+
+.ConcernHot{  /*关注热门按钮*/
+  position: relative
+}
+.ConcernPostButton1{  /*关注动态按钮*/
+  position: absolute;
+  /* font-weight: bold; */
+  left: 200rpx;
+
+}
+.ConcernPostButton2{  /*关注动态按钮*/
+  position: absolute;
+  /* font-weight: bold; */
+  left:440rpx;
+}
+.ButtonText{
+  font-weight: bold;
 }
