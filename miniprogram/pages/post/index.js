@@ -121,8 +121,51 @@ Page({
       })
     })
   },
-  // 处理点赞
-  tapLike:function() {
+  // 给用户post点赞
+  tapLike: function (e) {
+    var timestamp = Date.parse(new Date());
+    timestamp = timestamp / 1000;
+    var postArray = this.data.post_array
+    console.log(e.target.dataset.id)
+    const index = e.target.dataset.id
+    const postId = e.target.dataset.postid
 
+    if (!postArray[index].isLike) {
+      // 如果没有点赞、点赞
+      postLike.add({
+        data: {
+          post_id: postId,
+          user_id: index_open_id,
+          time: timestamp,
+          beliked_user: userOpenId
+        }
+      }).then(res => {
+        console.log("Like post")
+        postArray[index]["isLike"] = true
+        postArray[index]["likes"] += 1
+        this.setData({
+          post_array: postArray
+        })
+      })
+    }
+    else {
+      // 如果点赞了取消点赞，并且删除数据库记录
+      postLike.where({
+        post_id: postId,
+        user_id: index_open_id
+      }).get().then(res => {
+        // 搜出后删除记录
+        postLike.doc(res.data[0]._id).remove().then(res => {
+          console.log("Delete post like record")
+          // 向前段传送数据
+          postArray[index]["isLike"] = false
+          postArray[index]["likes"] -= 1
+          this.setData({
+            post_array: postArray
+          })
+        })
+      })
+    }
   },
+
 })

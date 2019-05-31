@@ -214,6 +214,7 @@ Page({
       }).then(res => {
         console.log("Like post")
         postArray[index]["isLike"] = true
+        postArray[index]["likes"] += 1
         this.setData({
           post_array: postArray
         })
@@ -230,6 +231,7 @@ Page({
           console.log("Delete post like record")
           // 向前段传送数据
           postArray[index]["isLike"] = false
+          postArray[index]["likes"] -= 1
           this.setData({
             post_array: postArray
           })

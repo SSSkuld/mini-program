@@ -10,9 +10,8 @@ Page({
   data: {
     openID: '',
     isConcern: true,
-    concernStyle: ["black", "bold", "none", "none"],
+    concernStyle: ["#6094e2", "bold", "none", "none"],
     hotStyle: ["grey", "bold", "none", "none"],
-    hotColor: "grey",
     endpos: 0,
     postArr: [],
     postList: [],
@@ -44,7 +43,7 @@ Page({
   changeConcern: function() {
     this.setData({
       isConcern: true,
-      concernStyle: ["black", "bold", "none", "red"],
+      concernStyle: ["#6094e2", "bold", "none", "red"],
       hotStyle: ["grey", "bold", "none", "none"],
       postList: [],
       endpos: 0
@@ -56,7 +55,7 @@ Page({
     this.setData({
       isConcern: false,
       concernStyle: ["gray", "bold", "none", "none"],
-      hotStyle: ["black", "bold", "none", "red"],
+      hotStyle: ["#6094e2", "bold", "none", "red"],
       postList: [],
       endpos: 0
     });

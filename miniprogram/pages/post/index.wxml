@@ -1,3 +1,8 @@
+<!-- 顶部提示栏 -->
+<view class='top-class'>
+  Post
+</view>
+
 <!--用户信息-->
 <view class='UserInfo'>
   <navigator url="../others/index?_id={{post.user_openid}}" open-type='navigate'>
