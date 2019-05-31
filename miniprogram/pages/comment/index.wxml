@@ -1,0 +1,48 @@
+<!-- 先有原post的文本 -->
+<view class='first-comment'>
+  <image class='first-avatar' src='{{post.avatarUrl}}'>
+  </image>
+  <view class='first-text'>
+    <text style='font-weight:bold'>{{post.nickName}}: </text>
+    <text>{{post.text}}</text>
+  </view>
+</view>
+
+<!-- 评论区域 -->
+<view class='comment-container'>
+  <block wx:for='{{first_comment}}' wx:key='{{_id}}'>
+    <view class='first-comment'>
+      <image class='first-avatar' src='{{item.avatarUrl}}'>
+      </image>
+      <view class='first-text'>
+        <text style='font-weight:bold'>{{item.nickName}}: </text>
+        <text>{{item.text}}</text>
+      </view>
+      <view class='first-reply' bindtap='firstReply' data-id='{{item._id}}' data-nickname='{{item.nickName}}'>
+        reply
+      </view>
+    </view>
+    <block wx:for='{{item.second_comment}}' wx:key='{{_id}}'>
+      <view class='second-comment'>
+        <image class='second-comment-avatar' src='{{item.avatarUrl}}'>
+        </image>
+        <view class='second-comment-text'>
+          <text style='font-weight:bold'>{{item.nickName}} </text>
+          <text style='font-weight:bold'>{{item.comment_nickName}}: </text>
+          <text>{{item.text}}</text>
+        </view>
+        <!-- <view class='first-reply' bindtap='secondReply' data-id='{{item._id}}' data-nickname='{{item.nickName}}'>
+          reply
+        </view> -->
+      </view>
+    </block>
+  </block>
+</view>
+
+
+
+<!-- 评论输入区域 -->
+<view class='comment-view' style='{{comment_view}}'>
+  <input class='comment-input' adjust-position='{{false}}' placeholder='Comment as you like' focus='{{focus}}' cursor-spacing='40rpx' bindinput='commentInput' bindfocus='inputFocus' bindblur='inputBlur'></input>
+  <button class='comment-btn' bindtap='postComment'>post</button>
+</view>

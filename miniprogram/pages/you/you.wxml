@@ -1,0 +1,36 @@
+<view class="MyTitle">
+  <view class="follow" catchtap='jump1'>
+    FOLLOWING
+  </view>
+  <view class="you">
+    YOU
+  </view>
+</view>
+
+<view wx:for="{{ifo_list}}" wx:key="{{index}}">
+  <view class="item">
+    <view class="list">
+
+      <!-- ?openid={{item.recommend_openid}} -->
+      <view class="icon">
+        <navigator url="../others/index">
+          <image class='img' src="{{item.usericon}}"></image>
+        </navigator>
+      </view>
+
+      <view class="ifo">
+        <view class="Usr_name">{{item.username}}</view>
+        <view class="Brief_ifo">{{item.location}}</view>
+      </view>
+
+      <view class="flag">
+
+        <button class="button1" wx:if="{{item.isFollow==false}}" bindtap="follow" data-index="{{index}}">+ 关注</button>
+
+        <button class="button2" wx:else bindtap="unfollow" data-index="{{index}}">已关注</button>
+
+      </view>
+
+    </view>
+  </view>
+</view>

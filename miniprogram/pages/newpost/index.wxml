@@ -1,0 +1,28 @@
+<view>
+  <textarea class="input-text" auto-focus placeholder="Write a caption..." bindinput='bindinput' maxlength="140">
+  </textarea>
+</view>
+
+
+<!-- 图片预览 -->
+<view class='image-view'>
+  <!-- 添加照片 -->
+  <view class='add-image-view' hover-class='add-click' bindtap='addImage'>
+    <image src='../../images/add_grey.png' mode='widthFix' class='add-image'>
+    </image>
+  </view>
+  <block wx:for='{{temp_file}}' wx:key='{{_id}}'>
+    <image class='preview-image' src='{{item}}' mode='asToFill'>
+    </image>
+  </block>
+</view>
+
+<!-- tag -->
+<!-- <view class='tag-users'>
+  Tag people
+</view> -->
+
+<!-- share -->
+<button class='share-btn' bindtap='share'>
+  Share
+</button>

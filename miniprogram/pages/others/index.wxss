@@ -1,0 +1,187 @@
+/* pages/personal/index.wxss */
+
+.uparea {
+  position: relative;
+  width: 100%;
+  height: 350rpx;
+  background-color: rgba(211, 211, 211, 0.507);
+}
+
+.user-avatar {
+  position: absolute;
+  left: 20rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.user-nickname {
+  position: absolute;
+  width: 200rpx;
+  left: 20rpx;
+  top: 210rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #007aff;
+}
+
+.user-post {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 250rpx;
+}
+
+.user-followers {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 350rpx;
+}
+
+.user-followings {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 530rpx;
+}
+
+.post-number-text, .followers-number-text, .followings-number-text{
+  font-size: 34rpx;
+}
+
+.post-text, .followers-text, .followings-text{
+  font-size: 30rpx;
+  color: aliceblue;
+}
+
+.follow-button{
+  position: absolute;
+  width: 80%;
+  height: 50rpx;
+  bottom: 10rpx;
+  left: 10%;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.navbar{
+  display: flex;
+  width: 100%;
+  height: 80rpx;
+}
+.nav-be-tagged, .nav-thumbnail, .nav-detail{
+  width: 375rpx;
+  height: 80rpx;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-image{
+  height: 70rpx;
+  width: 70rpx;
+}
+
+.scroll-view-css{
+  widows: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thumbnail-image{
+  width: 248rpx;
+  height: 250rpx;
+  display: flex;
+  margin: 1rpx;
+}
+
+.detail-post{
+  widows: 750rpx;
+}
+
+.post-user-avatar{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+}
+
+.post-user-nickname{
+  position: absolute;
+  height: 80rpx;
+  line-height: 80rpx;
+  left: 80rpx;
+  top: 0;
+  font-size: 30rpx;
+}
+
+.number-of-like{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  align-content: center;
+  font-size: 30rpx;
+  text-indent: 20rpx;
+}
+
+.post-user-info{
+  width: 100%;
+  height: 80rpx;
+  align-content: center;
+  position: relative;
+}
+
+.detail-view{
+  width: 100%;
+}
+
+.post-icons{
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+}
+
+.like-icon, .comment-icon{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 10rpx;
+}
+
+.like-icon{
+  left: 20rpx;
+}
+
+.comment-icon{
+  left: 100rpx;
+}
+
+.post-text{
+  widows: 100%;
+  padding-left: 20rpx;
+  color: black;
+}
+
+.swiper{
+  width: 100%;
+  height: auto;
+}
+
+.detail-image{
+  width: 100%;
+  height: 750rpx;
+}
+
+.swiper-pre{
+  width: 100%;
+  height: 750rpx;
+}

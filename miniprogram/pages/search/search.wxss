@@ -1,0 +1,77 @@
+/* miniprogram/pages/search/search.wxss */
+@import "../base/base.wxss";
+@import "../you/you.wxss";
+.search{  
+  background-color: #d0d0d0;
+  top: 0rpx;
+  position:fixed;
+  width: 100%; 
+  height:70rpx;
+  display: flex;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  z-index: 10;
+}  
+.search_arr { 
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;  
+  border-radius: 20rpx;  
+  margin-left: 20rpx;  
+  width: 580rpx;
+  display: flex;
+  flex-direction: row 
+}  
+.search_arr input{  
+  margin-top: 5rpx;
+  margin-left: 60rpx; 
+  margin-right: 10rpx;
+  height: 60rpx; 
+  border-radius: 5px;  
+}  
+.searchcion {  
+  margin-top: 15rpx;
+  position: absolute;  
+  left:35rpx;  
+  width: 40rpx;  
+  height: 40rpx;  
+  text-align: center;  
+}
+.clearcion{
+  margin-top: 18rpx;
+  position: absolute;  
+  left:550rpx;
+  z-index: 2;  
+  width: 40rpx;  
+  height: 40rpx;  
+  text-align: center;  
+}
+.searchButton {  
+  margin-left:15rpx;  
+  width: 110rpx;  
+  line-height: 150%;  
+  text-align: center;  
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx; 
+  z-index: 10;
+} 
+.searchScope{
+  position:fixed;
+  top:90rpx;
+  display: flex;
+  background-color: #d0d0d0;
+  z-index: 10;
+}
+.searchTag{
+  text-align: center; 
+  font-size: 40rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  width: 375rpx;
+}
+.searchUser{
+  text-align: center; 
+  font-size: 40rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  width: 375rpx;
+}

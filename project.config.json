@@ -1,0 +1,145 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"appid": "wx41ff756b58877b11",
+	"projectname": "%E4%BA%91%E5%BC%80%E5%8F%91",
+	"libVersion": "2.2.5",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 14,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "newpost",
+					"pathName": "pages/newpost/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "base",
+					"pathName": "pages/base/base",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "comment",
+					"pathName": "pages/comment/index",
+					"query": "_postid=f4b905395ced44fe074d149b43be3a02",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "personal",
+					"pathName": "pages/personal/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "others",
+					"pathName": "pages/others/index",
+					"query": "_id=oe4dH469xEbNiKywNkk6jLgomAMs",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "you",
+					"pathName": "pages/you/you",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "follow",
+					"pathName": "pages/follow/follow",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "personal",
+					"pathName": "pages/personal/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "text",
+					"pathName": "pages/text/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "post",
+					"pathName": "pages/post/index",
+					"query": "_postid=f4b905395cef7fc5082e3cd20986408c",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "message2",
+					"pathName": "pages/message2/index",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

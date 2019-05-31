@@ -1,0 +1,27 @@
+<button style='height:750rpx; background-color:green'bindtap='tap'>
+asd
+</button>
+
+<button bindtap='tap2'>
+asd
+</button>
+
+<button style='height: 300rpx' bindtap='scroll'>
+1
+</button>
+
+<button style='height: 300rpx'>
+2
+</button>
+
+<button style='height: 300rpx'>
+3
+</button>
+
+<button style='height: 300rpx'>
+4
+</button>
+
+<button style='height: 300rpx'>
+5
+</button>

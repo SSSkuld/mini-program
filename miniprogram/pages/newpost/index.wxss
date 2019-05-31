@@ -1,0 +1,54 @@
+/* miniprogram/pages/newpost/index.wxss */
+
+.input-text {
+  width: 100%;
+  height: 200rpx;
+  border-bottom: solid 3rpx lightgrey;
+}
+
+.add-image, .add-image-view {
+  width: 127rpx;
+  height: 127rpx;
+}
+
+.add-image-view {
+  border: solid 3rpx lightgrey;
+  text-align: center;
+  display: flex;
+  margin: 10rpx;
+}
+
+.add-click {
+  background-color: rgb(216, 228, 238);
+}
+
+.image-view {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 320rpx;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: azure;
+}
+
+.preview-image {
+  width: 130rpx;
+  height: 130rpx;
+  display: flex;
+  margin: 10rpx;
+}
+
+.tag-users {
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  padding-left: 20rpx;
+  color: rgb(81, 151, 233);
+  border-top: solid 3rpx lightgray;
+  border-bottom: solid 3rpx lightgray;
+}
+
+.share-btn {
+  color: rgb(81, 151, 233);
+}

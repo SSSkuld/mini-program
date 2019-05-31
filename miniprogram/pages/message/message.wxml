@@ -1,0 +1,31 @@
+<!--导航栏-->
+<view class='Navigator' style='position:fixed;top:0;'>
+  <!--关注&热门-->
+  <view class="MessageBar">
+    <button class="MessageButton" bindtap="myLike">
+      <text style='color:{{MyLike[0]}};font-weight:{{MyLike[1]}};text-decoration:{{MyLike[2]}};text-decoration-color:{{MyLike[3]}}'>我喜欢的</text>
+    </button>
+    <button class="MessageButton" bindtap="likeMe">
+      <text style='color:{{LikeMe[0]}};font-weight:{{LikeMe[1]}};text-decoration:{{LikeMe[2]}};text-decoration-color:{{LikeMe[3]}}'>喜欢我的</text>
+    </button>
+  </view>
+</view>
+<!--占位符-->
+<view style='padding-bottom:75rpx'></view>
+<!--消息栏-->
+<view class='Message' wx:for = "{{messageList}}" wx:key="{{index}}">
+  <view class='UserIcon_Box'>
+    <image class='UserIcon' src='{{item.usericon}}'></image>
+  </view>
+  <view class='UserNameTime'>
+    <view class='UserName'>{{item.username}}</view>
+    <image class='LikeImage' src='../../images/like_red.png'></image>
+    <view class='Time'>{{item.posttime}}</view>
+  </view>
+  <view class='PostImageBox'>
+    <image class='PostImage' src='{{item.image}}'></image>
+  </view>
+</view>
+<view class='LoadMoreBox'>
+  <button class='LoadMore' bindtap='loadMore'>加载更多</button>
+</view>

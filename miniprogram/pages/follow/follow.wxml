@@ -1,0 +1,34 @@
+<view class="MyTitle">
+<view class="follow">
+FOLLOWING
+</view>
+<view class="you" catchtap='jump1'>
+YOU
+</view>
+</view>
+
+<view wx:for="{{concern_list}}" wx:key="{{index}}">
+<view class="item">
+<view class="list">
+
+
+<view class="icon">
+<image class='img' mode="aspectFit" src="{{item.usericon}}"></image>
+</view> 
+
+<view class="ifo">
+<view class="Usr_name">{{item.username}}</view>
+<view class="Brief_ifo">{{item.location}}</view>
+</view>
+
+<view class="flag">
+<button class='sub_icon' bindtap="unfollow" data-index="{{index}}" >已关注</button>
+</view>
+
+</view>
+
+</view>
+</view>
+
+
+

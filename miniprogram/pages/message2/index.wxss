@@ -1,0 +1,28 @@
+.container{
+  margin-top: 100rpx;
+  width: 750rpx;
+}
+.user-like-view{
+  width: 750rpx;
+  height: 150rpx;
+  background-color: azure;
+  
+}
+.user-like-avatar{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%
+}
+
+.post-image-preview{
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.nav-top{
+  position: fixed;
+  top: 0;
+  background-color: bisque;
+  height: 100rpx;
+  width: 100%;
+}

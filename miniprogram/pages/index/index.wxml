@@ -1,0 +1,12 @@
+<!-- 界面logo -->
+<view class='logo-view'>
+  <image src='../../images/camera_index.png' class='logo-img'>
+  </image>
+</view>
+
+<!-- 授权按钮，获取用户信息 -->
+<block wx:if="{{!isAuthorized}}">
+  <button open-type='getUserInfo' class='authorize-btn' bindgetuserinfo='onGotUserInfo'>
+    请您授权
+  </button>
+</block>

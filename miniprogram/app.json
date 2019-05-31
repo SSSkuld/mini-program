@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/base/base",
+    "pages/follow/follow",
+    "pages/you/you",
+    "pages/personal/index",
+    "pages/others/index",
+    "pages/comment/index",
+    "pages/message/message",
+    "pages/newpost/index",
+    "pages/search/search",
+    "pages/text/index",
+    "pages/post/index",
+    "pages/message2/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "练习两年半",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/base/base",
+        "iconPath": "images/首页_gray.png",
+        "selectedIconPath": "images/首页_black.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "images/搜索_gray.png",
+        "selectedIconPath": "images/搜索_black.png"
+      },
+      {
+        "pagePath": "pages/newpost/index",
+        "iconPath": "images/加号_gray.png",
+        "selectedIconPath": "images/加号_black.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "images/爱心_gray.png",
+        "selectedIconPath": "images/爱心_black.png"
+      },
+      {
+        "pagePath": "pages/personal/index",
+        "iconPath": "images/我的_gray.png",
+        "selectedIconPath": "images/我的_black.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

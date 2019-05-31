@@ -1,0 +1,109 @@
+/* page/follow/follow.wxss */
+.MyTitle{
+    display: flex;
+    height: 80rpx;
+}
+.follow{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #515151;
+    font-size: 30rpx;
+    border-width: 0px 0px 0px 0px;
+    border-color: #cdcdcd;
+    border-style: solid;
+}
+.you{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #515151;
+    width: 50%;
+    font-size: 30rpx;
+    border-width: 0px 0px 2px 0px;
+    border-color: #cdcdcd;
+    border-style: solid;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    height: 120rpx;
+    justify-content: space-around;
+
+    border-width: 0px 2px 2px 2px;
+    border-color: #dbdbdb;
+    border-style: solid;
+}
+.list{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 100%;
+    margin-left: 3%;
+}
+.icon{
+    display: flex;
+    width: 25%;
+    height: 90%;
+}
+.img{
+  margin-top: 5%;
+  border-radius: 216rpx;
+  height: 108rpx;
+  width: 108rpx;
+  
+}
+.ifo{
+    width: 45%;
+    flex-direction: column;
+    justify-content: space-around;
+    display: flex;
+}
+.flag{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.button1{
+  color: white;
+  font-size: 22rpx;
+  background-color:#1296db;
+}
+.button2{
+  color: white;
+  font-size: 22rpx;
+  background-color:#bfbfbf;
+}
+.navigation{
+    border-width: 2px 2px 2px 2px;
+    border-color: #cdcdcd;
+    border-style: solid;
+}
+
+.Usr_name{
+    font-size: 30rpx;
+}
+.Brief_ifo{
+    font-size: 20rpx;
+    font-family: "Microsoft Yahei";
+}
+.Title{
+    flex: 5;
+    padding-left: 100rpx;
+    margin-top:2rpx;
+}
+.small_icon{
+    flex: 3;
+    height: 50%
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+

@@ -1,0 +1,105 @@
+<!--miniprogram/pages/search/search.wxml-->
+<!--占位符-->
+<view style='height:{{searchAreaHeight}}rpx'></view>
+<!--搜索框-->
+<view class="search"> 
+  <view class="search_arr">  
+    <icon class="searchcion" size='20' type='search'></icon>  
+    <input placeholder="请输入关键字" bindinput="bindKeyInput" value="{{inputValue}}"/> 
+    <view wx:if="{{inputValue.length > 0}}" bindtap="clearInput">
+          <icon class="clearcion" type="clear" size="15"></icon>
+    </view>
+  </view> 
+  <view class='searchButton' wx:if="{{inputValue.length > 0}}" bindtap='clickSearchButton'>搜索</view> 
+</view>
+<!--选择搜索范围-->
+<view class='searchScope' wx:if="{{searchButtonPushed}}">
+  <button class='searchTag' bindtap='changeSearchTag'>
+    <test style='color:{{searchTagStyle[0]}};font-weight:{{searchTagStyle[1]}};text-decoration-color:{{searchTagStyle[2]}}'>Post</test>
+  </button>
+  <button class='searchUser' bindtap='changeSearchUser'>
+    <test style='color:{{searchUserStyle[0]}};font-weight:{{searchUserStyle[1]}};text-decoration-color:{{searchUserStyle[2]}}'>User</test>
+  </button>
+</view>
+<!--动态-->
+<view class='Post' wx:if="{{isTag}}" wx:for = "{{postList}}" wx:key="{{index}}">
+  <!--用户信息-->
+  <view class='UserInfo'>
+    <view class='UserIcon_Box'>
+      <image class='UserIcon' src='{{item.usericon}}'></image>
+    </view>
+    <view class='UserName_time'>
+      <view class='UserName'>{{item.username}}</view>
+      <view class='PostTime'>{{item.posttime}}</view>
+    </view>
+    <view class='HandleButtonView'>
+      <image class='HandleButton' src="cloud://train25years-b437f2.7472-train25years-b437f2/删除.png"></image>
+    </view>
+  </view>
+  <!--动态文本-->
+  <view class='Text'>
+  {{item.text}}
+  </view>
+  <!--动态图片-->
+  <view class='Image'>
+    <view wx:if="{{item.image==[]}}"></view>
+    <view wx:elif="{{item.image.length==1}}">
+      <image bindtap="imgYu" class="OnePic" src='{{item.image[0]}}' data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+    </view>
+    <view wx:elif="{{item.image.length>1&&item.image.length<5}}">
+      <image bindtap="imgYu" class="FourPic" src='{{item.image[0]}}' data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+      <image bindtap="imgYu" class="FourPic" src='{{item.image[1]}}' data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+      <image bindtap="imgYu" wx:if="{{item.image.length>=3}}" class="FourPic" src='{{item.image[2]}}'  data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+      <image bindtap="imgYu" wx:if="{{item.image.length>=4}}" class="FourPic" src='{{item.image[3]}}'  data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+    </view>
+    <view wx:elif="{{item.image.length>=5}}">
+      <image bindtap="imgYu" class="NinePic" src='{{item.image[0]}}' data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+      <image bindtap="imgYu" class="NinePic" src='{{item.image[1]}}' data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+      <image bindtap="imgYu" class="NinePic" src='{{item.image[2]}}' data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+      <image bindtap="imgYu" class="NinePic" src='{{item.image[3]}}' data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+      <image bindtap="imgYu" class="NinePic" src='{{item.image[4]}}' data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+      <image bindtap="imgYu" wx:if="{{item.image.length>=6}}" class="NinePic" src='{{item.image[5]}}'  data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+      <image bindtap="imgYu" wx:if="{{item.image.length>=7}}" class="NinePic" src='{{item.image[6]}}'  data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+      <image bindtap="imgYu" wx:if="{{item.image.length>=8}}" class="NinePic" src='{{item.image[7]}}'  data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+      <image bindtap="imgYu" wx:if="{{item.image.length>=9}}" class="NinePic" src='{{item.image[8]}}'  data-src="{{item.image[0]}}" data-index = '{{index}}'></image>
+    </view>
+  </view>
+  <!--转发&评论&点赞-->
+  <view class="ProcessPost">
+    <view class='TransmitButtonView'>
+      <image class='ProcessButton' src="cloud://train25years-b437f2.7472-train25years-b437f2/转发.png"></image>
+    </view>
+    <view class='ProcessButtonView'>
+      <image class='ProcessButton' src="cloud://train25years-b437f2.7472-train25years-b437f2/评论.png"></image>
+    </view>
+    <view class='ProcessButtonView'>
+      <image class='ProcessButton' src='{{item.likeLink}}' data-index = '{{index}}' catchtap="like" ></image>
+    </view>
+    <view class="LikeNum">
+      {{item.likeNum}}
+    </view>
+  </view>
+</view>
+
+
+<view wx:if="{{isTag==false}}" wx:for="{{infoList}}" wx:key="{{index}}">
+  <view class="item">
+    <view class="list">
+      <navigator class='icon' url="../personal/index?openid={{item.recommend_openid}}" open-type='navigate'>
+        <image class='img' mode="aspectFit" src="{{item.usericon}}"></image>
+      </navigator> 
+      <view class="ifo">
+        <view class="Usr_name">{{item.username}}</view>
+        <view class="Brief_ifo">{{index}}</view>
+      </view>
+      <view class="flag">
+        <image class="sub_icon" bindtap="follow" data-index="{{index}}" src="{{item.url}}" mode="widthFix"></image> 
+        <image class="sub_icon" bindtap="unfollow" data-index="{{index}}" src="../../images/close-circle.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='LoadMoreBox' wx:if="{{searchButtonPushed}}">
+  <button class='LoadMore' bindtap='loadMore'>加载更多</button>
+</view>

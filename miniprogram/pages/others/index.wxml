@@ -1,0 +1,137 @@
+<!--pages/personal/index.wxml-->
+<view class='uparea'>
+
+  <image src='{{user_info.avatarUrl}}' class='user-avatar'>
+  </image>
+
+  <view class='user-nickname'>
+    {{user_info.nickName}}
+  </view>
+
+  <view class='user-post' bindtap='clickPost'>
+    <view class='post-number-text'>
+      {{post_cnt}}
+    </view>
+    <view class='followings-text'>
+      Posts
+    </view>
+  </view>
+
+  <view class='user-followers' bindtap='clickFollower'>
+    <view class='followers-number-text'>
+      {{follower_cnt}}
+    </view>
+    <view class='followings-text'>
+      Followers
+    </view>
+  </view>
+
+  <view class='user-followings' bindtap='clickFollowing'>
+    <view class='followings-number-text'>
+      {{following_cnt}}
+    </view>
+    <view class='followings-text'>
+      Following
+    </view>
+  </view>
+
+  <button class='follow-button' bindtap='followUser'>
+    <block wx:if='{{!is_follow}}'>
+      Follow
+    </block>
+    <block wx:else>
+      Unfollow
+    </block>
+  </button>
+
+</view>
+
+<view class='navbar'>
+  <view class='nav-thumbnail' bindtap='tapThumbnail'>
+    <image wx:if="{{hidden_thumbnail}}" src="../../images/thumbnail_grey.png" class='nav-image'>
+    </image>
+    <image wx:else src="../../images/thumbnail_blue.png" class='nav-image'>
+    </image>
+  </view>
+  <view class='nav-detail' bindtap='tapDetail'>
+    <image wx:if="{{hidden_detail}}" src="../../images/detail_grey.png" class='nav-image'>
+    </image>
+    <image wx:else src="../../images/detail_blue.png" class='nav-image'>
+    </image>
+  </view>
+</view>
+
+<!-- 缩略图 -->
+<view hidden="{{hidden_thumbnail}}" class='scroll-view-css'>
+  <block wx:for="{{post_array}}" wx:key="{{_id}}">
+    <view class='thumbnail-image'>
+      <image class='thumbnail-image' src="{{item.images[0].file_id}}" mode='scaleToFill' data-index='{{index}}' bindtap='scrollToDetail'>
+      </image>
+    </view>
+  </block>
+</view>
+
+
+<!-- 详细个人post -->
+<view hidden="{{hidden_detail}}" class='detail-view'>
+  <block wx:for="{{post_array}}" wx:key="{{_key}}">
+    <view class='detail-post'>
+      <view class='post-user-info'>
+        <!-- post用户头像 -->
+        <image src='{{user_info.avatarUrl}}' class='post-user-avatar'>
+        </image>
+        <!-- post用户名字 -->
+        <view class='post-user-nickname'>
+          {{user_info.nickName}}
+        </view>
+      </view>
+      <!-- post用户照片 -->
+      <swiper class='swiper-pre'>
+        <block wx:for="{{item.images}}" wx:key="{{_id}}">
+          <swiper-item class='height: 700rpx'>
+            <image class='detail-image' mode='scaleToFill' src='{{item.file_id}}'>
+            </image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <!-- post图标层 -->
+      <view class='post-icons'>
+        <!-- 点赞 -->
+        <block wx:if='{{item.isLike}}'>
+          <image src='../../images/like_red.png' class='like-icon' data-id='{{index}}' data-postid='{{item._id}}' bindtap='tapLike'>
+          </image>
+        </block>
+        <block wx:else>
+          <image src='../../images/like_grey.png' class='like-icon' data-id='{{index}}' data-postid='{{item._id}}' bindtap='tapLike'>
+          </image>
+        </block>
+        <!-- 评论 -->
+        <navigator url='../comment/index?_postid={{item._id}}'>
+          <image src='../../images/comment_grey.png' class='comment-icon'>
+          </image>
+        </navigator>
+      </view>
+      <!-- 赞数 -->
+      <view class='number-of-like'>
+        <text>like by </text>
+        <text style='font-weight: bold'>{{item.likes}}</text>
+        <text> users</text>
+      </view>
+      <!-- post原文 -->
+      <view class='post-text'>
+        <text style='font-weight: bold'>{{user_info.nickName}}</text>
+        <text> {{item.post_text}}</text>
+      </view>
+    </view>
+  </block>
+</view>
+
+
+<!-- <scroll-view scroll-y hidden="{{hidden_be_tagged}}" class='scroll-view-css'>
+  <block wx:for="{{post_array}}" wx:key="{{_key}}">
+    <navigator url=''>
+      <image class='-image' src="{{item.fileId}}">
+      </image>
+    </navigator>
+  </block>
+</scroll-view> -->

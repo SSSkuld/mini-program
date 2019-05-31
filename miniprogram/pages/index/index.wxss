@@ -1,0 +1,19 @@
+.logo-view, .logo-img{
+  width: 504rpx;
+  height: 550rpx;
+}
+
+.logo-view{
+  margin-top: 40rpx;
+  margin-left: 123rpx;
+}
+
+.authorize-btn{
+  background-color: rgba(14, 131, 14, 0.11); 
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  align-content: center;
+  margin-top: 60rpx;
+}

@@ -1,0 +1,47 @@
+<!--用户信息-->
+<view class='UserInfo'>
+  <navigator url="../others/index?_id={{post.user_openid}}" open-type='navigate'>
+    <image class='UserIcon' src='{{post.avatarUrl}}' openid='{{post.user_openid}}'></image>
+  </navigator>
+  <view class='UserName'>{{post.nickName}}</view>
+  <view class='PostTime'>{{post.post_time}}</view>
+</view>
+
+<swiper class='swiper-pre'>
+  <block wx:for="{{post.image}}" wx:key="{{_id}}">
+    <swiper-item class='height: 700rpx'>
+      <image class='detail-image' mode='scaleToFill' src='{{item.file_id}}'>
+      </image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 点赞、评论 -->
+<view class='post-icons'>
+  <!-- 点赞 -->
+  <block wx:if='{{post.isLike}}'>
+    <image src='../../images/like_red.png' data-index='{{index}}' data-postid='{{post._id}}' class='like-icon' bindtap='tapLike'>
+    </image>
+  </block>
+  <block wx:else>
+    <image src='../../images/like_grey.png' class='like-icon' bindtap='tapLike' data-index='{{index}}' data-postid='{{post._id}}'>
+    </image>
+  </block>
+  <!-- 评论 -->
+  <navigator url='../comment/index?_postid={{post._id}}'>
+    <image src='../../images/comment_grey.png' class='comment-icon'>
+    </image>
+  </navigator>
+</view>
+<!-- 赞数 -->
+<view class='number-of-like'>
+  <text>like by </text>
+  <text style='font-weight: bold'>{{post.likes}}</text>
+  <text> users</text>
+</view>
+
+<!-- post原文 -->
+<view class='post-text'>
+  <text style='font-weight: bold'>{{post.nickName}}</text>
+  <text> {{post.post_text}}</text>
+</view>

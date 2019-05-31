@@ -1,0 +1,326 @@
+/* pages/base/base.wxss */
+.Navigator{  /*导航栏*/
+  height: 80rpx;
+  width: 100%;
+  background-color: rgb(240, 240, 240);
+  border-bottom: 1px solid #ccc;
+  display: flex
+}
+.PhotoButtonView{  /*相机显示*/
+  padding: 10rpx;
+}
+.PhotoButton{  /*相机按钮*/
+  height: 60rpx;
+  width: 60rpx;
+  background-size: 60rpx 60rpx;
+}
+.ConcernHot{  /*关注热门按钮*/
+  padding-left: 180rpx;
+  display: flex
+}
+.ConcernPostButton{  /*关注动态按钮*/  
+  font-size: 33rpx;
+  padding: 0px;
+  height:70rpx;
+  width: 100rpx;
+  display: table;
+}
+.WriteButtonView{  /*相机显示*/
+  padding: 10rpx;
+  padding-left: 200rpx
+}
+.WriteButton{  /*相机按钮*/
+  height: 60rpx;
+  width: 60rpx;
+  background-size: 60rpx 60rpx;
+}
+
+.Post{  /*动态*/
+  padding:10px;
+  border-bottom: 5px solid #ccc;
+}
+.UserInfo{  /*用户信息*/
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+  background-color: azure;
+}
+
+.UserName{  /*动态用户*/
+  width: 200rpx;
+  font-size: 30rpx;
+  color: black;
+  position: absolute;
+  left: 80rpx;
+  top: 25rpx;
+}
+.PostTime{  /*动态时间*/
+  position: absolute;
+  right: 10rpx;
+  bottom: 0rpx;
+  font-size: 25rpx;
+  color: #CCC
+}
+
+.UserIcon{  /*用户头像*/
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+}
+
+.Text{  /*动态文本*/
+  padding-top: 30rpx;
+  padding-left: 10rpx
+}
+.Image{  /*图像*/
+  padding-left: 0rpx
+}
+.OnePic{  /*一张图*/
+  padding:10rpx;
+  height: 600rpx;
+  width: 600rpx
+}
+.FourPic{  /*四张图*/
+  padding:10rpx;
+  height: 300rpx;
+  width: 300rpx
+}
+.NinePic{  /*九张图*/
+  padding:10rpx;
+  height: 200rpx;
+  width: 200rpx;
+}
+.ProcessPost{  /*动态处理栏*/
+  height: 60rpx;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  display: flex;
+  padding-bottom: 10rpx
+}
+.TransmitButtonView{  /*转发按钮位置*/
+  padding: 10rpx;
+  padding-left: 50rpx
+}
+.ProcessButtonView{  /*处理按钮位置*/
+  padding: 10rpx;
+  padding-left: 20rpx
+}
+.ProcessButton{  /*处理按钮*/
+  height: 60rpx;
+  width: 60rpx;
+  background-size: 60rpx 60rpx;
+}
+.LikeNum{  /*点赞数*/
+  font-family: '微软雅黑';
+  padding:10rpx;
+  font-size: 45rpx;
+  color: #ccc
+}
+.LoadMoreBox{  /*加载更多背景*/
+  background: #ccc;
+}
+.LoadMore{  /*加载更多*/
+  font-size: 40rpx;
+  color: #fff;
+  background-color: #ccc
+}
+
+/* 添加 */
+/* pages/personal/index.wxss */
+
+.uparea {
+  position: relative;
+  width: 100%;
+  height: 350rpx;
+  background-color: lightgrey;
+}
+
+.user-avatar {
+  position: absolute;
+  left: 20rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.user-nickname {
+  position: absolute;
+  width: 200rpx;
+  left: 20rpx;
+  top: 210rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #007aff;
+}
+
+.user-post {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 250rpx;
+}
+
+.user-followers {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 350rpx;
+}
+
+.user-followings {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 530rpx;
+}
+
+.post-number-text, .followers-number-text, .followings-number-text{
+  font-size: 34rpx;
+}
+
+.post-text, .followers-text, .followings-text{
+  font-size: 30rpx;
+  color: aliceblue;
+}
+
+.follow-button{
+  position: absolute;
+  width: 80%;
+  height: 50rpx;
+  bottom: 10rpx;
+  left: 10%;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.navbar{
+  display: flex;
+  width: 100%;
+  height: 80rpx;
+}
+.nav-be-tagged, .nav-thumbnail, .nav-detail{
+  width: 375rpx;
+  height: 80rpx;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-image{
+  height: 70rpx;
+  width: 70rpx;
+}
+
+.scroll-view-css{
+  widows: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thumbnail-image{
+  width: 248rpx;
+  height: 250rpx;
+  display: flex;
+  margin: 1rpx;
+}
+
+.detail-post{
+  widows: 750rpx;
+}
+
+.post-user-avatar{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+}
+
+.post-user-nickname{
+  position: absolute;
+  height: 80rpx;
+  line-height: 80rpx;
+  left: 80rpx;
+  top: 0;
+  font-size: 30rpx;
+}
+
+.number-of-like{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  align-content: center;
+  font-size: 30rpx;
+  text-indent: 0rpx;
+}
+
+.post-user-info{
+  width: 100%;
+  height: 80rpx;
+  align-content: center;
+  position: relative;
+}
+
+.detail-view{
+  width: 100%;
+}
+
+.post-icons{
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+}
+
+.like-icon, .comment-icon{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 10rpx;
+}
+
+.like-icon{
+  left: 00rpx;
+}
+
+.comment-icon{
+  left: 80rpx;
+}
+
+.post-text{
+  widows: 100%;
+  padding-left: 0rpx;
+  color: black;
+}
+
+.swiper{
+  width: 100%;
+  height: auto;
+}
+
+.detail-image{
+  width: 100%;
+  height: 750rpx;
+}
+
+.swiper-pre{
+  width: 100%;
+  height: 750rpx;
+}
+
+/* scroll view */
+.publishes{
+  height: 100%;
+  width: 100%;
+}
+
+
