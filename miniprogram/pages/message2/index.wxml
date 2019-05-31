@@ -42,20 +42,12 @@
 
 <view class='Navigator' style='position:fixed;top:0;'>
   <view class="ConcernHot">
-    <button class="ConcernPostButton1" bindtap="changeLike">
+    <button class="ConcernPostButton1" style='color:{{like_color}}' bindtap="changeLike">
       <text class="ButtonText">Following</text>
     </button>
-    <button class="ConcernPostButton2" bindtap="changeBelike">
+    <button class="ConcernPostButton2" style='color:{{belike_color}}' bindtap="changeBelike">
       <text class="ButtonText">You</text>
     </button>
   </view>
 </view>
 
-<!-- <view class='nav-top'>
-  <button bindtap='changeLike'>
-    following
-  </button>
-  <button bindtap='changeBelike'>
-    you
-  </button>
-</view> -->

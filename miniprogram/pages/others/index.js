@@ -358,7 +358,7 @@ Page({
       hidden_thumbnail: true,
       hidden_detail: false,
     })
-    var rpx = 350 + 80
+    var rpx = 300 + 80
     rpx += index * 930
     var px = rpx / 750 * wx.getSystemInfoSync().windowWidth;
     console.log("index", index, "px", px)

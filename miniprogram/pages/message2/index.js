@@ -12,7 +12,9 @@ Page({
    */
   data: {
     hidden_like: false,
-    hidden_belike: true
+    hidden_belike: true,
+    like_color: "#6094e2",
+    belike_color: "grey"
   },
 
   /**
@@ -183,14 +185,18 @@ Page({
   changeLike:function(e) {
     this.setData({
       hidden_like: false,
-      hidden_belike: true
+      hidden_belike: true,
+      like_color: "#6094e2",
+      belike_color: "grey"
     })
   },
   
   changeBelike:function(e) {
     this.setData({
       hidden_like: true,
-      hidden_belike: false
+      hidden_belike: false,
+      like_color: "grey",
+      belike_color: "#6094e2"
     })
   }
 })

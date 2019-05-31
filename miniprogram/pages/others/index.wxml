@@ -125,13 +125,3 @@
     </view>
   </block>
 </view>
-
-
-<!-- <scroll-view scroll-y hidden="{{hidden_be_tagged}}" class='scroll-view-css'>
-  <block wx:for="{{post_array}}" wx:key="{{_key}}">
-    <navigator url=''>
-      <image class='-image' src="{{item.fileId}}">
-      </image>
-    </navigator>
-  </block>
-</scroll-view> -->
