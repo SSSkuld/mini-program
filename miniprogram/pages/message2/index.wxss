@@ -6,17 +6,24 @@
   width: 750rpx;
   height: 150rpx;
   background-color: azure;
+  position:  relative;
   
 }
 .user-like-avatar{
   width: 80rpx;
   height: 80rpx;
-  border-radius: 50%
+  border-radius: 50%;
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
 }
 
 .post-image-preview{
   width: 120rpx;
   height: 120rpx;
+  top: 20rpx;
+  right: 20rpx;
+  position: absolute;
 }
 
 .nav-top{
@@ -25,4 +32,14 @@
   background-color: bisque;
   height: 100rpx;
   width: 100%;
+}
+
+/* 文本 */
+.like-text{
+  font-size: 30rpx;
+}
+
+.like-time{
+  font-size: 25rpx;
+  color: lightgrey
 }

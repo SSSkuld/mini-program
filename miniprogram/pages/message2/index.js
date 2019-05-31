@@ -43,6 +43,21 @@ Page({
     for (var i = 0; i < numberOfUserLike; i++) {
       const likeImage = await this.getLikeImage(userLike[i].post_id)
       userLike[i]["image"] = likeImage
+      var n = userLike[i].time * 1000;
+      var date = new Date(n);
+      //年  
+      var Y = date.getFullYear();
+      //月  
+      var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+      //日  
+      var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+      //时  
+      var h = date.getHours();
+      //分  
+      var m = date.getMinutes();
+      //秒  
+      var s = date.getSeconds();
+      userLike[i]["postTime"] = Y + '-' + M + '-' + D + ' ' + h + ':' + m + ':' + s,
       this.setData({
         user_like: userLike
       })
@@ -51,9 +66,24 @@ Page({
     for (var i = 0; i < numberOfUserBeLike; i++) {
       const likeImage = await this.getLikeImage(userBeLike[i].post_id)
       const userInfo = await this.getUserInfo(userBeLike[i]._openid)
+      var n = userBeLike[i].time * 1000;
+      var date = new Date(n);
+      //年  
+      var Y = date.getFullYear();
+      //月  
+      var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+      //日  
+      var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+      //时  
+      var h = date.getHours();
+      //分  
+      var m = date.getMinutes();
+      //秒  
+      var s = date.getSeconds();
       userBeLike[i]["image"] = likeImage
       userBeLike[i]["userAvatar"] = userInfo.avatarUrl
       userBeLike[i]["userNickname"] = userInfo.nickName
+      userBeLike[i]["postTime"] = Y + '-' + M + '-' + D + ' ' + h + ':' + m + ':' + s,
       this.setData({
         user_belike: userBeLike
       })
