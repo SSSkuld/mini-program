@@ -52,8 +52,8 @@
   font-size: 30rpx;
   color: black;
   position: absolute;
-  left: 80rpx;
-  top: 25rpx;
+  left: 85rpx;
+  top: 20rpx;
 }
 .PostTime{  /*动态时间*/
   position: absolute;
