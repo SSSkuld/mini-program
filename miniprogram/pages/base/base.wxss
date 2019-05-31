@@ -44,7 +44,7 @@
   width: 100%;
   height: 80rpx;
   position: relative;
-  background-color: azure;
+  background-color: white;
 }
 
 .UserName{  /*动态用户*/
@@ -58,7 +58,7 @@
 .PostTime{  /*动态时间*/
   position: absolute;
   right: 10rpx;
-  bottom: 0rpx;
+  bottom: 25rpx;
   font-size: 25rpx;
   color: #CCC
 }
