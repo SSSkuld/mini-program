@@ -107,22 +107,22 @@
 <!--导航栏-->
 <view class='Navigator' style='position:fixed;top:0;'>
   <!--二维码按钮-->
-  <view class='PhotoButtonView'>
+  <!-- <view class='PhotoButtonView'>
     <image class='PhotoButton' src="cloud://train25years-b437f2.7472-train25years-b437f2/扫描二维码.png" bindtap='scan'></image>
-  </view>
+  </view> -->
 
   <!--关注&热门-->
   <view class="ConcernHot">
-    <button class="ConcernPostButton" bindtap="changeConcern">
+    <button class="ConcernPostButton1" bindtap="changeConcern">
       <text style='color:{{concernStyle[0]}};font-weight:{{concernStyle[1]}};text-decoration:{{concernStyle[2]}};text-decoration-color:{{concernStyle[3]}}'>Follow</text>
     </button>
-    <button class="ConcernPostButton" bindtap="changeHot">
+    <button class="ConcernPostButton2" bindtap="changeHot">
       <text style='color:{{hotStyle[0]}};font-weight:{{hotStyle[1]}};text-decoration:{{hotStyle[2]}};text-decoration-color:{{hotStyle[3]}}'>Hit</text>
     </button>
   </view>
 
   <!--写动态-->
-  <view class='WriteButtonView'>
+  <!-- <view class='WriteButtonView'>
     <image class='WriteButton' src="cloud://train25years-b437f2.7472-train25years-b437f2/加号.png" bindtap='writePost'></image>
-  </view>
+  </view> -->
 </view>

@@ -19,7 +19,7 @@
 
   <view class='user-followers' bindtap='clickFollower'>
     <view class='followers-number-text'>
-      {{follower_cnt}}
+      <text>{{follower_cnt}}</text>
     </view>
     <view class='followings-text'>
       Followers
@@ -34,10 +34,10 @@
       Following
     </view>
   </view>
-
+<!-- 
   <button class='profile-button'>
     Edit Profile
-  </button>
+  </button> -->
 
 </view>
 

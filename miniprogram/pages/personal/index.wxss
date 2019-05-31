@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   height: 300rpx;
-  background-color: rgba(211, 211, 211, 0.507);
+  background-color: rgba(249, 249, 249, 1);
 }
 
 .user-avatar {
@@ -24,43 +24,52 @@
   bottom: 30rpx;
   text-align: center;
   font-size: 30rpx;
-  color: #007aff;
+  color: black;
+  font-weight: bold;
 }
 
 .user-post {
   width: 100rpx;
   height: 100rpx;
   position: absolute;
-  top: 50rpx;
+  top: 90rpx;
   left: 250rpx;
+  text-align: center;
 }
 
 .user-followers {
-  width: 100rpx;
+  width: 130rpx;
   height: 100rpx;
   position: absolute;
-  top: 50rpx;
-  left: 350rpx;
+  top: 90rpx;
+  left: 380rpx;
+  text-align: center;
 }
 
 .user-followings {
-  width: 100rpx;
+  width: 130rpx;
   height: 100rpx;
   position: absolute;
-  top: 50rpx;
-  left: 530rpx;
+  top: 90rpx;
+  left: 560rpx;
+  text-align: center;
+
 }
 
 .post-number-text, .followers-number-text, .followings-number-text{
+  /* left: 20rpx; */
+  text-align: center;
   font-size: 34rpx;
+  color: black;
 }
 
 .post-text, .followers-text, .followings-text{
   font-size: 30rpx;
-  color: aliceblue;
+  color: rgb(152, 152, 168);
 }
 
 .profile-button{
+  top: 110px;
   position: absolute;
   width: 60%;
   height: 50rpx;
