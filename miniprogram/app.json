@@ -41,7 +41,7 @@
         "selectedIconPath": "images/加号_black.png"
       },
       {
-        "pagePath": "pages/message/message",
+        "pagePath": "pages/message2/index",
         "iconPath": "images/爱心_gray.png",
         "selectedIconPath": "images/爱心_black.png"
       },

@@ -12,30 +12,7 @@
       <view class='UserName'>{{item.username}}</view>
       <view class='PostTime'>{{item.posttime}}</view>
     </view>
-    <!--动态图片-->
-    <!-- <view class='Image'>
-      <view wx:if="{{item.image==[]}}"></view>
-      <view wx:elif="{{item.image.length==1}}">
-        <image bindtap="imgYu" class="OnePic" src='{{item.image[0]}}' data-src="{{item.image[0]}}" data-index='{{index}}'></image>
-      </view>
-      <view wx:elif="{{item.image.length>1&&item.image.length<5}}">
-        <image bindtap="imgYu" class="FourPic" src='{{item.image[0]}}' data-src="{{item.image[0]}}" data-index='{{index}}'></image>
-        <image bindtap="imgYu" class="FourPic" src='{{item.image[1]}}' data-src="{{item.image[1]}}" data-index='{{index}}'></image>
-        <image bindtap="imgYu" wx:if="{{item.image.length>=3}}" class="FourPic" src='{{item.image[2]}}' data-src="{{item.image[0]}}" data-index='{{index}}'></image>
-        <image bindtap="imgYu" wx:if="{{item.image.length>=4}}" class="FourPic" src='{{item.image[3]}}' data-src="{{item.image[0]}}" data-index='{{index}}'></image>
-      </view>
-      <view wx:elif="{{item.image.length>=5}}">
-        <image bindtap="imgYu" class="NinePic" src='{{item.image[0]}}' data-src="{{item.image[0]}}" data-index='{{index}}'></image>
-        <image bindtap="imgYu" class="NinePic" src='{{item.image[1]}}' data-src="{{item.image[1]}}" data-index='{{index}}'></image>
-        <image bindtap="imgYu" class="NinePic" src='{{item.image[2]}}' data-src="{{item.image[2]}}" data-index='{{index}}'></image>
-        <image bindtap="imgYu" class="NinePic" src='{{item.image[3]}}' data-src="{{item.image[3]}}" data-index='{{index}}'></image>
-        <image bindtap="imgYu" class="NinePic" src='{{item.image[4]}}' data-src="{{item.image[4]}}" data-index='{{index}}'></image>
-        <image bindtap="imgYu" wx:if="{{item.image.length>=6}}" class="NinePic" src='{{item.image[5]}}' data-src="{{item.image[5]}}" data-index='{{index}}'></image>
-        <image bindtap="imgYu" wx:if="{{item.image.length>=7}}" class="NinePic" src='{{item.image[6]}}' data-src="{{item.image[6]}}" data-index='{{index}}'></image>
-        <image bindtap="imgYu" wx:if="{{item.image.length>=8}}" class="NinePic" src='{{item.image[7]}}' data-src="{{item.image[7]}}" data-index='{{index}}'></image>
-        <image bindtap="imgYu" wx:if="{{item.image.length>=9}}" class="NinePic" src='{{item.image[8]}}' data-src="{{item.image[8]}}" data-index='{{index}}'></image>
-      </view>
-    </view> -->
+    
     <swiper class='swiper-pre'>
       <block wx:for="{{item.image}}" wx:key="{{_id}}">
         <swiper-item class='height: 700rpx'>
@@ -75,42 +52,11 @@
       <text> {{item.text}}</text>
     </view>
 
-    <!--动态文本-->
-    <!-- <view class='Text'>
-      {{item.text}}
-    </view> -->
-
-    <!--转发&评论&点赞-->
-    <!-- <view class="ProcessPost">
-      <view class='TransmitButtonView'>
-        <image class='ProcessButton' src="cloud://train25years-b437f2.7472-train25years-b437f2/转发.png"></image>
-      </view>
-      <view class='ProcessButtonView'>
-        <image class='ProcessButton' src="cloud://train25years-b437f2.7472-train25years-b437f2/评论.png" catchtap='comment'></image>
-      </view>
-      <view class='ProcessButtonView'>
-        <image class='ProcessButton' src='{{item.likeLink}}' data-index='{{index}}' catchtap="like"></image>
-      </view>
-      <view class="LikeNum">
-        {{item.likeNum}}
-      </view>
-    </view> -->
-
   </view>
 </scroll-view>
 
-<!--加载更多-->
-<!-- <view class='LoadMoreBox'>
-  <button class='LoadMore' bindtap='loadMore'>加载更多</button>
-</view> -->
-
 <!--导航栏-->
 <view class='Navigator' style='position:fixed;top:0;'>
-  <!--二维码按钮-->
-  <!-- <view class='PhotoButtonView'>
-    <image class='PhotoButton' src="cloud://train25years-b437f2.7472-train25years-b437f2/扫描二维码.png" bindtap='scan'></image>
-  </view> -->
-
   <!--关注&热门-->
   <view class="ConcernHot">
     <button class="ConcernPostButton1" bindtap="changeConcern">
@@ -120,9 +66,4 @@
       <text style='color:{{hotStyle[0]}};font-weight:{{hotStyle[1]}};text-decoration:{{hotStyle[2]}};text-decoration-color:{{hotStyle[3]}}'>Hit</text>
     </button>
   </view>
-
-  <!--写动态-->
-  <!-- <view class='WriteButtonView'>
-    <image class='WriteButton' src="cloud://train25years-b437f2.7472-train25years-b437f2/加号.png" bindtap='writePost'></image>
-  </view> -->
 </view>

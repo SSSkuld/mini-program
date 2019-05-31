@@ -2,7 +2,7 @@
 .Navigator{  /*导航栏*/
   height: 80rpx;
   width: 100%;
-  background-color: rgb(240, 240, 240);
+  background-color: rgba(249, 249, 249, 1);
   border-bottom: 1px solid #ccc;
   display: flex
 }
@@ -38,7 +38,7 @@
 
 .Post{  /*动态*/
   padding:10px;
-  border-bottom: 5px solid #ccc;
+  border-bottom: 3px solid #ccc;
 }
 .UserInfo{  /*用户信息*/
   width: 100%;

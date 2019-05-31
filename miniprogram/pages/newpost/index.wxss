@@ -1,4 +1,34 @@
 /* miniprogram/pages/newpost/index.wxss */
+/* 顶部导航栏 */
+
+.topper{
+  height: 80rpx;
+  position:relative;
+  width: 750rpx;
+  background-color: rgba(249, 249, 249, 1);
+}
+
+.share-btn {
+  position: absolute;
+  width: 150rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  align-content: center;
+  right: 0rpx;
+  /* background-color: rgb(0, 178, 106); */
+  color: #6094e2;
+  font-size: 34rpx;
+}
+
+.top-title{
+  position: absolute;
+  left: 300rpx;
+  font-size: 34rpx;
+  line-height: 80rpx;
+  align-content: center;
+}
+
 
 .input-text {
   width: 100%;
@@ -49,16 +79,5 @@
   border-bottom: solid 3rpx lightgray;
 }
 
-.topper{
-  height: 100rpx;
-  position:relative;
-}
 
-.share-btn {
-  position: absolute;
-  width: 150rpx;
-  right: 0rpx;
-  background-color: rgb(0, 178, 106);
-  color: white;
-  font-size: 25rpx;
-}
+
