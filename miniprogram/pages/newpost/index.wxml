@@ -4,7 +4,7 @@
     New post
   </view>
   <button class='share-btn' bindtap='share'>
-    Share
+    <image class='btnimg' src="cloud://train25years-b437f2.7472-train25years-b437f2/纸飞机.png"></image>
   </button>
 </view>
 

@@ -13,12 +13,21 @@
   width: 150rpx;
   height: 80rpx;
   line-height: 80rpx;
-  text-align: center;
-  align-content: center;
+  /* text-align: center;
+  align-content: center; */
   right: 0rpx;
-  /* background-color: rgb(0, 178, 106); */
   color: #6094e2;
-  font-size: 34rpx;
+  background-size: 38rpx 36rpx;
+  background-repeat:no-repeat;
+  /* font-size: 34rpx; */
+}
+
+.btnimg{
+  bottom: 10rpx;
+  right: 40rpx;
+  width: 60rpx;
+  height: 55rpx;
+  position: absolute;
 }
 
 .top-title{
