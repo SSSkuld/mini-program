@@ -1,1 +1,46 @@
-/* miniprogram/pages/text/index.wxss */
+.image {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.time-text {
+  font-size: 14px;
+  color: #fff;
+}
+
+.item-text-view {
+  background: #000;
+  height: 30px;
+  position: relative;
+  margin-top: -35px;
+  display: block;
+  opacity: 0.6;
+}
+
+.content {
+  margin: 0.5%;
+}
+
+.item {
+  width: 98%;
+  height: auto;
+  text-align: center;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-bottom: 0.5%;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+.item-img{
+  width: 100%;
+}
+
+.left,.right{
+  display: inline-block;
+  vertical-align: top;
+  width: 49%;
+}
+.right{
+  float: right;
+}

@@ -26,7 +26,8 @@ Page({
       nickName: "",
       text: "",
       time: ""
-    }
+    },
+    input_init: ""
   },
 
   /**
@@ -250,35 +251,61 @@ Page({
   // 动态评论和评论评论
   postComment: function() {
     var that = this
-    if (isFirst){
-      db_postComment.add({
-        data: {
-          post_id: postId,
-          user_id: userInfo._openid,
-          nickName: userInfo.user_info.nickName,
-          avatarUrl: userInfo.user_info.avatarUrl,
-          text: input
-        }
-      }).then(res => {
-        console.log("Add post comment")
-        that.getAllComment(postId)
-      })
+    if(input) {
+      if (isFirst) {
+        db_postComment.add({
+          data: {
+            post_id: postId,
+            user_id: userInfo._openid,
+            nickName: userInfo.user_info.nickName,
+            avatarUrl: userInfo.user_info.avatarUrl,
+            text: input
+          }
+        }).then(res => {
+          console.log("Add post comment")
+          that.getAllComment(postId)
+          wx.showToast({
+            title: 'Sent!',
+            icon: 'success',
+            duration: 2000
+          })
+          this.setData({
+            input_init: ""
+          })
+        })
+      }
+      else {
+        console.log("commentComment")
+        db_SecondComment.add({
+          data: {
+            comment_id: current_comment_id,
+            comment_nickName: current_user_nickName,
+            user_id: userInfo._openid,
+            nickName: userInfo.user_info.nickName,
+            avatarUrl: userInfo.user_info.avatarUrl,
+            text: input
+          }
+        }).then(res => {
+          console.log("Add second comment")
+          that.getAllComment(postId)
+          isFirst = true
+          wx.showToast({
+            title: 'Sent!',
+            icon: 'success',
+            duration: 2000
+          })
+          this.setData({
+            input_init: ""
+          })
+        })
+      }
     }
     else {
-      console.log("commentComment")
-      db_SecondComment.add({
-        data: {
-          comment_id: current_comment_id,
-          comment_nickName: current_user_nickName,
-          user_id: userInfo._openid,
-          nickName: userInfo.user_info.nickName,
-          avatarUrl: userInfo.user_info.avatarUrl,
-          text: input
-        }
-      }).then(res => {
-        console.log("Add second comment")
-        that.getAllComment(postId)
-        isFirst = true
+      wx.showModal({
+        title: "Comment failed.",
+        content: "Comment can't be empty",
+        confirmText: "confirm",
+        showCancel: false,
       })
     }
     

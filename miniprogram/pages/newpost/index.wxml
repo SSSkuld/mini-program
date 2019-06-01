@@ -9,7 +9,7 @@
 </view>
 
 <view>
-  <textarea class="input-text" auto-focus placeholder="Write a caption..." bindinput='bindinput' maxlength="140">
+  <textarea class="input-text" auto-focus placeholder="Write a caption..." bindinput='bindinput' maxlength="140" value='{{input_init}}'>
   </textarea>
 </view>
 

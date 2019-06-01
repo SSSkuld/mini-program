@@ -45,7 +45,7 @@
 
   <!-- 评论输入区域 -->
   <view class='comment-view' style='{{comment_view}}'>
-    <input class='comment-input' adjust-position='{{false}}' placeholder='Comment as you like' focus='{{focus}}' cursor-spacing='40rpx' bindinput='commentInput' bindfocus='inputFocus' bindblur='inputBlur'></input>
+    <input class='comment-input' adjust-position='{{false}}' placeholder='Comment as you like' focus='{{focus}}' cursor-spacing='40rpx' bindinput='commentInput' bindfocus='inputFocus' bindblur='inputBlur' value='{{input_init}}'></input>
     <button class='comment-btn' bindtap='postComment'>post</button>
   </view>
 </view>

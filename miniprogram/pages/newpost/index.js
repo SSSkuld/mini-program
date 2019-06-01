@@ -11,7 +11,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    input_init: ""
   },
 
   /**
@@ -104,7 +104,15 @@ Page({
         const res = await this.addPostImage(postId, fileId)
       }
     }
-    
+    wx.showToast({
+      title: 'Shared!',
+      icon: 'success',
+      duration: 2000
+    })
+    this.setData({
+      temp_file: null,
+      input_init: ""
+    })
     console.log('upload done')
   },
 
@@ -176,13 +184,10 @@ Page({
 
   // 发post
   share: function() {
+    console.log(tempFilePaths)
     if (tempFilePaths) {
       this.uploadAndAdd(tempFilePaths)
-      wx.showToast({
-        title: 'Shared!',
-        icon: 'success',
-        duration: 2000
-      })
+      
     }
     else {
       wx.showModal({
