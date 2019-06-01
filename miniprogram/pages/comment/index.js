@@ -278,30 +278,10 @@ Page({
       }).then(res => {
         console.log("Add second comment")
         that.getAllComment(postId)
-        isFirst: true
+        isFirst = true
       })
     }
     
   },
 
-  // 评论他人评论
-  // commentComment: function(e) {
-  //   console.log(e)
-  //   console.log("commentComment")
-  //   var that = this
-  //   db_SecondComment.add({
-  //     data: {
-  //       comment_id: current_comment_id,
-  //       comment_nickName: current_user_nickName,
-  //       user_id: userInfo._openid,
-  //       nickName: userInfo.user_info.nickName,
-  //       avatarUrl: userInfo.user_info.avatarUrl,
-  //       text: input
-  //     }
-  //   }).then(res => {
-  //     console.log("Add second comment")
-  //     isFirst = true
-  //     that.getAllComment(postId)
-  //   })
-  // },
 })
