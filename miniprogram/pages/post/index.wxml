@@ -5,7 +5,7 @@
 
 <!--用户信息-->
 <view class='UserInfo'>
-  <navigator url="../others/index?_id={{post.user_openid}}" open-type='navigate'>
+  <navigator url="../others/index?_id={{post._openid}}" open-type='navigate'>
     <image class='UserIcon' src='{{post.avatarUrl}}' openid='{{post.user_openid}}'></image>
   </navigator>
   <view class='UserName'>{{post.nickName}}</view>

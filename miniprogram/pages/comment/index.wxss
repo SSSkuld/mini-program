@@ -1,5 +1,7 @@
 /* miniprogram/pages/comment/index.wxss */
-
+.container{
+  margin-bottom: 70rpx;
+}
 .comment-view{
   position: fixed;
   width: 100%;

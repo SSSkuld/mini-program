@@ -35,7 +35,8 @@
     </view>
   </view>
 
-  <button class='follow-button' bindtap='followUser'>
+  <!-- 关注按钮 -->
+  <button  style='background-color:{{follow_color}}' class='follow-button' bindtap='followUser'>
     <block wx:if='{{!is_follow}}'>
       Follow
     </block>

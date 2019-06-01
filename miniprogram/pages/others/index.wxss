@@ -200,10 +200,13 @@
 .follow-button{
   background-color: rgb(18, 150, 219);
   color: white;
-  width: 160rpx;
+  width: 200rpx;
   top: 205rpx;
   right: 50rpx;
   position: absolute;
-  font-size: 25rpx;
-  
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+  height: 60rpx;
+  align-content: center;
 }

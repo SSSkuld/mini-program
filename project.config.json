@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 14,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -77,10 +77,10 @@
 					"scene": null
 				},
 				{
-					"id": 7,
+					"id": 6,
 					"name": "others",
 					"pathName": "pages/others/index",
-					"query": "_id=oe4dH469xEbNiKywNkk6jLgomAMs",
+					"query": "_id=oe4dH4xQeCqiW1yBAT7TS_Z-RMQM",
 					"scene": null
 				},
 				{

@@ -54,6 +54,7 @@ Page({
     this.setData({
       user_info: userInfo.user_info,
       is_follow: isFollow,
+      follow_color: isFollow ? "lightgrey": "#008ddd",
       post_cnt: numberOfPost,
       follower_cnt: numberOfFollower,
       following_cnt: numberOfFollowing
@@ -253,7 +254,8 @@ Page({
       }).then(res => {
         console.log("Follow user")
         this.setData({
-          is_follow: true
+          is_follow: true,
+          follow_color: "lightgrey"
         })
       })
     }
@@ -266,7 +268,8 @@ Page({
         follow.doc(res.data[0]._id).remove().then(
           console.log("Unfollow user"),
           that.setData({
-            is_follow: false
+            is_follow: false,
+            follow_color: "#008ddd"
           })
         )
       })
