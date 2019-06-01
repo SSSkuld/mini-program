@@ -176,11 +176,21 @@ Page({
 
   // 发post
   share: function() {
-    this.uploadAndAdd(tempFilePaths)
-    wx.showToast({
-      title: '上传成功',
-      icon: 'success',
-      duration: 2000
-    })
+    if (tempFilePaths) {
+      this.uploadAndAdd(tempFilePaths)
+      wx.showToast({
+        title: 'Shared!',
+        icon: 'success',
+        duration: 2000
+      })
+    }
+    else {
+      wx.showModal({
+        title: "Share failed.",
+        content: "Please at least choose 1 photo.",
+        confirmText: "confirm",
+        showCancel: false,
+      })
+    }
   }
 })
