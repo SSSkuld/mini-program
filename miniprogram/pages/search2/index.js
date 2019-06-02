@@ -88,6 +88,7 @@ Page({
 
   // 搜索动态
   searchPost() {
+    
     return new Promise((resolve, reject) => {
       db.collection('Post').where({
         //"post_text": this.data.inputValue
@@ -96,6 +97,7 @@ Page({
           $options: 'i'
         }
       }).orderBy('time', 'desc').get().then(res => {
+        console.log("searchpost", res)
         resolve(res.data);
       })
     })
@@ -142,7 +144,7 @@ Page({
   },
 
   // 搜索动态
-  searchPost: function(e) {
+  clickPost: function(e) {
     this.setData({
       hidden_search_user: true,
       hidden_search_post: false
@@ -150,7 +152,7 @@ Page({
   },
 
   // 搜索用户
-  searchUser: function(e) {
+  clickUser: function(e) {
     this.setData({
       hidden_search_user: false,
       hidden_search_post: true
