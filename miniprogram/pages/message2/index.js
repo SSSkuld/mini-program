@@ -115,7 +115,6 @@ Page({
     })
   },
 
-
   // 获取操作用户被点赞的数量
   getNumberOfUserBeLike(_openId) {
     return new Promise((resolve, reject) => {

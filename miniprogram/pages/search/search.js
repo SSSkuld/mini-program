@@ -94,76 +94,8 @@ Page({
       urls: postArr[Index].image // 需要预览的图片http链接列表
     })
   },//点赞
-  like: function (e) {
-    var Index = e.currentTarget.dataset.index;
-    // data中获取列表   
-    var postArr = this.data.postList;
-    //console.log(Index)
-    for (let i in postArr) {
-      //遍历列表数据      
-      if (i == Index) {
-        //根据下标找到目标,改变状态  
-        if (postArr[i].isLike == false) {//点赞
-          postArr[i].isLike = true
-          postArr[i].likeLink = "cloud://train25years-b437f2.7472-train25years-b437f2/点赞2.png"
-          wx.showToast({
-            title: 'like',
-            icon: 'none',
-            duration: 500
-          })
-          //更新post-like数
-          postArr[i].likeNum = postArr[i].likeNum + 1
-          //更新post-like表
-          db.collection('PostLike').add({
-            data: {
-              post_id: postArr[i].post_id,
-              user_id: this.data.openID,
-              beliked_user: postArr[i].user_openid,
-            }
-          }).then(res2 => {
-            //console.log(res2);
-          }).catch(err => {
-            console.log(err);
-          })
-        }
-        else {//取消点赞
-          postArr[i].isLike = false
-          postArr[i].likeLink = "cloud://train25years-b437f2.7472-train25years-b437f2/点赞.png"
-          wx.showToast({
-            title: 'dislike',
-            icon: 'none',
-            duration: 500
-          })
-          //更新post-like数
-          postArr[i].likeNum = postArr[i].likeNum - 1
-          //更新post-like表
-          db.collection('PostLike').where({
-            user_id: this.data.openID,
-            post_id: postArr[i].post_id,
-          }).get().then(res => {
-            //console.log(res.data[0]._id);
-            db.collection('PostLike').doc(res.data[0]._id)
-              .remove().then(res2 => {
-                //console.log(res2);
-              }).catch(err => {
-                console.log(err);
-              })
-          }).catch(err => {
-            console.log(err);
-          })
-        }
-      }
-    }
-    this.setData({
-      postList: postArr
-    })
-  },
-  loadMore: function () {
-    a = Number(this.data.isTag ? this.data.endpos : this.data.endinfo) + Number(1)
-    b = Number(this.data.isTag ? this.data.endpos : this.data.endinfo) + Number(6)
-    //console.log(b)
-    this.data.isTag ? this.GetPost(a, b) : this.GetInfo(a, b)
-  },
+  
+  
   async GetPost(st, ed) {
     const MyOpenID = await this.getOpenID()
     const MyPost = await this.getPost()

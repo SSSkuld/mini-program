@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 15,
 			"list": [
 				{
 					"id": -1,
@@ -136,6 +136,13 @@
 					"id": -1,
 					"name": "message2",
 					"pathName": "pages/message2/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 15,
+					"name": "search2",
+					"pathName": "pages/search2/index",
 					"query": "",
 					"scene": null
 				}

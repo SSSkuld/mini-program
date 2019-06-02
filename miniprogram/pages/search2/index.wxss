@@ -1,0 +1,184 @@
+/* miniprogram/pages/search2/index.wxss */
+
+.search-view {
+  width: 750rpx;
+  height: 80rpx;
+  background-color: azure;
+  position: relative;
+}
+
+.search-navigator{
+  widows: 750rpx;
+  height: 60rpx;
+  background-color: aqua;
+  position: relative
+}
+
+.navigator-left, .navigator-right{
+  position: absolute;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 200rpx;
+  text-align: center;
+  align-content: center;
+}
+
+.navigator-left{
+  left: 75rpx;
+}
+
+.navigator-right{
+  right: 75rpx;
+}
+
+.search-input {
+  position: absolute;
+  border: solid 1rpx lightgrey;
+  width: 65%;
+  height: 60rpx;
+  border-radius: 30rpx;
+  left: 20rpx;
+  top: 10rpx;
+  font-size: 30rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+}
+
+.search-btn {
+  position: absolute;
+  right: 20rpx;
+  border: solid 1rpx lightgrey;
+  width: 22%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  align-content: center;
+  font-size: 30rpx;
+  top: 10rpx;
+}
+
+.container{
+  
+  width: 750rpx;
+}
+.user-like-view{
+  width: 750rpx;
+  height: 150rpx;
+  background-color: white;
+  position:  relative;
+  border-bottom: 1px solid #ccc;
+}
+.user-like-avatar{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 20rpx;
+  top: 30rpx;
+}
+
+.post-image-preview{
+  width: 120rpx;
+  height: 120rpx;
+  top: 20rpx;
+  right: 20rpx;
+  position: absolute;
+}
+
+.nav-top{
+  position: fixed;
+  top: 0;
+  background-color: bisque;
+  height: 100rpx;
+  width: 100%;
+}
+
+/* 文本 */
+.like-text{
+  top: 30rpx;
+  left: 130rpx;
+  width: 700rpx;
+  font-size: 30rpx;
+  position: absolute;
+}
+
+.like-time{
+  font-size: 25rpx;
+  top: 80rpx;
+  left: 130rpx;
+  width: 700rpx;
+  color: rgb(90, 90, 90);
+  position: absolute;
+}
+
+.image {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.time-text {
+  font-size: 14px;
+  color: #fff;
+}
+
+.item-text-view {
+  background: #000;
+  height: 30px;
+  position: relative;
+  margin-top: -35px;
+  display: block;
+  opacity: 0.6;
+}
+
+.content {
+  margin: 0.5%;
+}
+
+.item {
+  width: 98%;
+  height: auto;
+  text-align: center;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-bottom: 0.5%;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+.item-img{
+  width: 100%;
+}
+
+.left,.right{
+  display: inline-block;
+  vertical-align: top;
+  width: 49%;
+}
+.right{
+  float: right;
+}
+
+.user-view{
+  width: 750rpx;
+  height: 100rpx;
+  position: relative;
+}
+
+.user-avatar{
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  left: 20rpx;
+  top: 10rpx;
+}
+
+.user-nickName{
+  position: absolute;
+  font-size: 30rpx;
+  left: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  top: 20rpx;
+  align-content: center;
+}

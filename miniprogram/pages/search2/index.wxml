@@ -1,0 +1,72 @@
+<!-- 搜索输入区域 -->
+<view class='search-view'>
+  <input class='search-input' bindinput='searchInput'>
+  </input>
+  <button class='search-btn' bindtap='search'>
+    search
+  </button>
+</view>
+
+<!-- 搜索选择区域 -->
+<view class='search-navigator' hidden='{{hidden_search}}'>
+  <button class='navigator-left' bindtap='searchPost'>
+    Post
+  </button>
+  <button class='navigator-right' bindtap='searchUser'>
+    User
+  </button>
+</view>
+
+<!-- 瀑布图 -->
+<view hidden='{{hidden_waterfall}}' class='content'>
+  <view class="left">
+    <block wx:for="{{waterfall}}" wx:key="">
+      <navigator url='../post/index?_postid={{item.post_id}}'>
+        <image class='item-img' src='{{item.file_id}}' wx:if='{{index%2==0}}' mode='widthFix'></image>
+      </navigator>
+    </block>
+  </view>
+  <view class="right">
+    <block wx:for="{{waterfall}}" wx:key="">
+      <navigator url='../post/index?_postid={{item.post_id}}'>
+        <image class='item-img' src='{{item.file_id}}' wx:if='{{index%2==1}}' mode='widthFix'></image>
+      </navigator>
+    </block>
+  </view>
+</view>
+
+<!-- 搜索出的动态 -->
+<view hidden='{{hidden_search_post}}' class='container'>
+  <block wx:for='{{post}}' wx:key='{{_id}}'>
+    <navigator url='../post/index?_postid={{item._id}}'>
+      <view class='user-like-view'>
+        <image class='user-like-avatar' src='{{item.avatarUrl}}'>
+        </image>
+        <view class='like-text'>
+          <text style='font-weight:bold'>{{item.nickName}}</text>
+          {{item.post_text}}
+        </view>
+        <view class='like-time'>
+          {{item.post_time}}
+        </view>
+        <image class='post-image-preview' src='{{item.image}}'>
+        </image>
+      </view>
+    </navigator>
+  </block>
+</view>
+
+<!-- 搜索出的用户 -->
+<view hidden='{{hidden_search_user}}' class='container'>
+  <block wx:for='{{user}}' wx:key='{{_id}}'>
+    <navigator url='../others/index?_id={{item._openid}}'>
+      <view class='user-view'>
+        <image src='{{item.user_info.avatarUrl}}' class='user-avatar'>
+        </image>
+        <view class='user-nickName'>
+          {{item.user_info.nickName}}
+        </view>
+      </view>
+    </navigator>
+  </block>
+</view>

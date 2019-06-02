@@ -11,7 +11,8 @@
     "pages/search/search",
     "pages/text/index",
     "pages/post/index",
-    "pages/message2/index"
+    "pages/message2/index",
+    "pages/search2/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -30,7 +31,7 @@
         "selectedIconPath": "images/首页_black.png"
       },
       {
-        "pagePath": "pages/search/search",
+        "pagePath": "pages/search2/index",
         "iconPath": "images/搜索_gray.png",
         "selectedIconPath": "images/搜索_black.png"
       },
