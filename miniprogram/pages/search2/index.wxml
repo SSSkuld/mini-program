@@ -3,17 +3,17 @@
   <input class='search-input' bindinput='searchInput'>
   </input>
   <button class='search-btn' bindtap='search'>
-    search
+    <text class='search-text'>search</text>
   </button>
 </view>
 
 <!-- 搜索选择区域 -->
 <view class='search-navigator' hidden='{{hidden_search}}'>
   <button class='navigator-left' bindtap='searchPost'>
-    Post
+    <text>Post</text>
   </button>
   <button class='navigator-right' bindtap='searchUser'>
-    User
+    <text>User</text>
   </button>
 </view>
 
