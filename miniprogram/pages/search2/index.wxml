@@ -9,10 +9,10 @@
 
 <!-- 搜索选择区域 -->
 <view class='search-navigator' hidden='{{hidden_search}}'>
-  <button class='navigator-left' bindtap='searchPost'>
+  <button class='navigator-left' bindtap='clickPost'>
     Post
   </button>
-  <button class='navigator-right' bindtap='searchUser'>
+  <button class='navigator-right' bindtap='clickUser'>
     User
   </button>
 </view>
